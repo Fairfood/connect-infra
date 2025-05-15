@@ -230,3 +230,35 @@ echo "✔ Setup completed successfully."
 ```
 
 - Displays a success message at the end of execution.
+
+## Troubleshoot and Update
+
+### Logs
+
+Check for logs
+
+```bash
+docker logs -f tc-django
+```
+
+### Update the environment and restart the server
+
+Pull the latest version of connect-infra
+
+```bash
+git pull origin main
+```
+
+Add the below environment to the file connect-infra/env/.project.env in [app] section
+
+```bash
+BACKEND_ROOT_URL={{your_backend_url}}
+```
+
+Restart the server
+
+```bash
+make dev-down
+make dev-up
+```
+
