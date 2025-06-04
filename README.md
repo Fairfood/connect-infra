@@ -36,6 +36,13 @@ This repository contains an automated setup script and Makefile for efficiently 
    chmod +x setup.sh
    ./setup.sh
    ```
+3. **Move to project folder**
+   ```bash
+   cd ../trace_connect
+   ```
+4. **Setup environment variables:**
+   a. Rename all sample env files inside env folder to corresponding .env. Eg. .django.env.sample -> .django.env   
+   b. Fill all the variables files inside env folder
 
 ## Makefile Commands
 ### General Commands
