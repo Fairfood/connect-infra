@@ -28,7 +28,7 @@ This repository contains an automated setup script and Makefile for efficiently 
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/Fairfood/connect-infra.git
-   cd trace_connect
+   cd connect-infra
    ```
 
 2. **Run the setup script:**
