@@ -81,7 +81,7 @@ services:
 
     django:
         container_name: tc-django
-        image: tc-django:local
+        # image: tc-django:local
         restart: always
         env_file:
             - ../env/.django.env
