@@ -41,6 +41,7 @@ This repository contains an automated setup script and Makefile for efficiently 
    cd ../trace_connect
    ```
 4. **Setup environment variables:**
+   
    a. Rename all sample env files inside env folder to corresponding .env. Eg. .django.env.sample -> .django.env   
    b. Fill all the variables files inside env folder
 
