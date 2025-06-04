@@ -27,8 +27,8 @@ This repository contains an automated setup script and Makefile for efficiently 
 ## Installation and Setup
 1. **Clone the repository:**
    ```bash
-   git clone git@git.cied.in:fairfood/trace-v2/backend/trace_connect.git
-   cd trace_connect
+   git clone https://github.com/Fairfood/connect-infra.git
+   cd connect-infra
    ```
 
 2. **Run the setup script:**
@@ -36,6 +36,14 @@ This repository contains an automated setup script and Makefile for efficiently 
    chmod +x setup.sh
    ./setup.sh
    ```
+3. **Move to project folder**
+   ```bash
+   cd ../trace_connect
+   ```
+4. **Setup environment variables:**
+   
+   a. Rename all sample env files inside env folder to corresponding .env. Eg. .django.env.sample -> .django.env   
+   b. Fill all the variables files inside env folder
 
 ## Makefile Commands
 ### General Commands
@@ -230,3 +238,35 @@ echo "✔ Setup completed successfully."
 ```
 
 - Displays a success message at the end of execution.
+
+## Troubleshoot and Update
+
+### Logs
+
+Check for logs
+
+```bash
+docker logs -f tc-django
+```
+
+### Update the environment and restart the server
+
+Pull the latest version of connect-infra
+
+```bash
+git pull origin main
+```
+
+Add the below environment to the file connect-infra/env/.project.env in [app] section
+
+```bash
+BACKEND_ROOT_URL={{your_backend_url}}
+```
+
+Restart the server
+
+```bash
+make dev-down
+make dev-up
+```
+
