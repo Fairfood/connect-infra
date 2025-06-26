@@ -42,8 +42,11 @@ This repository contains an automated setup script and Makefile for efficiently 
    ```
 4. **Setup environment variables:**
    
-   a. Rename all sample env files inside env folder to corresponding .env. Eg. .django.env.sample -> .django.env   
-   b. Fill all the variables files inside env folder
+   1. Rename all sample env files inside env folder to corresponding .env.*
+
+      Eg. `.django.env.sample` -> `.django.env`
+   2. Move `.project.env.sample` to `/etc/secret/fairtrace_v2/secret.ini`
+   3. Fill all the variables files inside env folder
 
 ## Makefile Commands
 ### General Commands
