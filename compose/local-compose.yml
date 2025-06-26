@@ -94,7 +94,7 @@ services:
             - ../../trace_connect/fairtrace_v2:/usr/src/app/trace_connect
             - ../../static:/usr/src/app/trace_connect/static
             - ../../media:/usr/src/app/trace_connect/media
-            - ../env/.project.env:/usr/src/app/trace_connect/.env
+            # - ../env/.project.env:/usr/src/app/trace_connect/.env
             - ../services/secrets/public-key.pem:/usr/src/app/trace_connect/public-key.pem
         networks:
             - backend-network
