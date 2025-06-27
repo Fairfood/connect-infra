@@ -87,15 +87,15 @@ services:
         restart: always
         env_file:
             - ../env/.django.env
-            # - ../env/.project.env
+            - ../env/.project.env
         volumes:
-            # - ../../trace_connect/fairtrace_v2:/usr/src/app/trace_connect
+            - ../../trace_connect/:/usr/src/app/trace_connect
             - ../../media:/usr/src/app/media
-            - /etc/secret/fairtrace_v2/:/etc/secret/fairtrace_v2
+            - /etc/secret/trace_connect/:/etc/secret/trace_connect
         networks:
             - backend-network
             - public-network
-        command: gunicorn fairtrace_v2.wsgi --bind 0.0.0.0:8000 --reload
+        command: gunicorn trace_connect.wsgi --bind 0.0.0.0:8000 --reload
         depends_on:
             - pgbouncer
             - redis62
