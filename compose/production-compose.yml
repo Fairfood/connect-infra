@@ -18,6 +18,7 @@ services:
         volumes:
             - ../../pg13data:/var/lib/postgresql/data/
             - ../services/config/postgresql.conf:/etc/postgresql/postgresql.conf
+            - ../services/secrets/.postgres_secret:/run/secrets/postgres_secret
         command: postgres -c config_file=/etc/postgresql/postgresql.conf
         secrets:
             - postgres_secret
@@ -71,7 +72,7 @@ services:
         env_file:
             - ../env/.nginx.env
         ports:
-            - "8000:8000"
+            - "80:80"
         volumes:
             - ../../static/:/var/www/static
             - ../nginx/.htpasswd:/etc/nginx/.htpasswd:ro
@@ -89,7 +90,7 @@ services:
             - ../env/.django.env
             - ../env/.project.env
         volumes:
-            - ../../trace_connect/:/usr/src/app/trace_connect
+            - ../../trace_connect/:/usr/src/app/
             - ../../media:/usr/src/app/media
             - /etc/secret/trace_connect/:/etc/secret/trace_connect
         networks:
