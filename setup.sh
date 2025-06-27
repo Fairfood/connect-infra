@@ -70,7 +70,7 @@ PARENT_DIR=$(dirname "$SCRIPT_DIR")
 PROJECT_DIR="$PARENT_DIR/trace_connect"
 
 # Clone the repository
-REPO_URL="https://github.com/Fairfood/Trace-Server.git"
+REPO_URL="https://github.com/Fairfood/Connect-Server.git"
 BRANCH="main"
 if [ ! -d "$PROJECT_DIR" ]; then
     echo "Cloning the repository to $PROJECT_DIR..."
