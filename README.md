@@ -1,5 +1,4 @@
-# Connect  Infra 
-
+# Connect  Infra
 
 # Setup and Hosting Guide
 
@@ -36,11 +35,7 @@ This repository contains an automated setup script and Makefile for efficiently 
    chmod +x setup.sh
    ./setup.sh
    ```
-3. **Move to project folder**
-   ```bash
-   cd ../trace_connect
-   ```
-4. **Setup environment variables:**
+3. **Setup environment variables:**
    1. Fill all the variables files inside env folder
 
 ## Makefile Commands
