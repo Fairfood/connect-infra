@@ -37,6 +37,13 @@ This repository contains an automated setup script and Makefile for efficiently 
    ```
 3. **Setup environment variables:**
    1. Fill all the variables files inside env folder
+   2. If you are not using SSO, set the environment value in `.project.env` as `SSO_ENABLED=0`
+
+### Mobile
+
+When using the custom backend for connect mobile application set the url with `/connect/v1/` path.
+
+eg: `http://exampleurl.com/connect/v1/`
 
 ## Makefile Commands
 ### General Commands
