@@ -39,6 +39,9 @@ This repository contains an automated setup script and Makefile for efficiently 
    1. Fill all the variables files inside env folder
    2. If you are not using SSO, set the environment value in `.project.env` as `SSO_ENABLED=0`
 
+4. **Setup password files**
+   1. Update the database and redis passwords in the password files in `services/secrets`
+
 ### Mobile
 
 When using the custom backend for connect mobile application set the url with `/connect/v1/` path.
