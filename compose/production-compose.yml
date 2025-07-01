@@ -89,7 +89,6 @@ services:
             - ../env/.django.env
             - ../env/.project.env
         volumes:
-            - ../../trace_connect/:/usr/src/app/
             - ../../media:/usr/src/app/media
             - /etc/secret/trace_connect/:/etc/secret/trace_connect
         networks:
