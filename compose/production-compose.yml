@@ -95,7 +95,9 @@ services:
             - backend-network
             - public-network
         command: gunicorn trace_connect.wsgi --bind 0.0.0.0:8000 --reload
+        # command: python manage.py runserver --settings trace_connect.settings.production 0.0.0.0:8000
         depends_on:
+            - postgres13
             - pgbouncer
             - redis62
 
