@@ -48,6 +48,16 @@ When using the custom backend for connect mobile application set the url with `/
 
 eg: `http://exampleurl.com/connect/v1/`
 
+### Debug
+
+1. Error with docker-compose command.
+
+   Update the .bashrc or .zshrc (if in mac) and add the following to the end of the file.
+   
+   `alias docker-compose="docker compose"`
+
+   And restart the terminal
+
 ## Makefile Commands
 ### General Commands
 - `make help` – Display available commands.
