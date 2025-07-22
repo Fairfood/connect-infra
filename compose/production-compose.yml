@@ -91,6 +91,8 @@ services:
         volumes:
             - ../../media:/usr/src/app/media
             - /etc/secret/trace_connect/:/etc/secret/trace_connect
+            - ../../static:/usr/src/app/trace_connect/static
+            - ../services/secrets/public-key.pem:/usr/src/app/trace_connect/public-key.pem
         networks:
             - backend-network
             - public-network

@@ -87,9 +87,9 @@ services:
         restart: always
         env_file:
             - ../env/.django.env
+            - ../env/.project.env
         volumes:
             - ../../static:/usr/src/app/trace_connect/static
-            # - ../env/.project.env:/usr/src/app/trace_connect/.env
             - ../services/secrets/public-key.pem:/usr/src/app/trace_connect/public-key.pem
         networks:
             - backend-network
