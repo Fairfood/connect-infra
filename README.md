@@ -41,6 +41,28 @@ This repository contains an automated setup script and Makefile for efficiently 
 
 4. **Setup password files**
    1. Update the database and redis passwords in the password files in `services/secrets`
+  
+### Setting first OTP
+
+Create a TOTP device and generate a QR code in the shell for scanning with 2FA applications.
+
+Access the django shell using `docker exec -it tc-django python manage.py shell_plus`
+
+Run the following commands to generate QR code.
+Update the `username` accordingly.
+
+```
+import qrcode
+from django_otp.plugins.otp_totp.models import TOTPDevice
+from v1.accounts.models import CustomUser
+user = CustomUser.objects.get(username='username')
+device = TOTPDevice.objects.get_or_create(user=user, name='admin')
+qr = qrcode.QRCode(box_size=10, border=4)
+qr.add_data(TOTPDevice.objects.first().config_url)
+qr.print_ascii()
+```
+
+Open Google Authenticator and scan the generated QR code to get the TOTP.
 
 ### Mobile
 
