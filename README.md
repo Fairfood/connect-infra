@@ -274,6 +274,14 @@ echo "✔ Setup completed successfully."
 
 - Displays a success message at the end of execution.
 
+### Configure System
+Now that the initial setup is complete, continue configuring your system:
+
+- Add **Companies**, **Products**, **Users**, and more  
+- Follow the detailed guide in the documentation:
+
+👉 [Continue Setup](configure-system)
+
 ## Troubleshoot and Update
 
 ### Logs
