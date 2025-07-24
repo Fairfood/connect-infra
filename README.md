@@ -280,6 +280,9 @@ Now that the initial setup is complete, continue configuring your system:
 - Add **Companies**, **Products**, **Users**, and more  
 - Follow the detailed guide in the documentation:
 
+### Next steps
+Right now you have the server up and running. You need to connect your server with the collect app. Before doing that, 
+you need to do some configs. You can use the django admin interface to do that. Follow this guide to
 👉 [Continue Setup](configure-system)
 
 ## Troubleshoot and Update
