@@ -274,13 +274,12 @@ echo "✔ Setup completed successfully."
 
 - Displays a success message at the end of execution.
 
-### Configure System
-Now that the initial setup is complete, continue configuring your system:
+### Next Steps
+Right now you have the server up and running. You need to connect your server 
+with the connect app. Before doing that, you need to do some configs. You can 
+use the Django Admin interface to do that.
 
-- Add **Companies**, **Products**, **Users**, and more  
-- Follow the detailed guide in the documentation:
-
-👉 [Continue Setup](configure-system)
+- Follow this guide to 👉 [Continue Setup](configure-system.md)
 
 ## Troubleshoot and Update
 
